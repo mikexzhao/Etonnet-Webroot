@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+  <!-- 	<link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet"> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <style>
+    .promo-section {
+      background-color: #c9deffe2;
+      color: rgb(35, 35, 35);
+      border-radius: 10px;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <title>Contact</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <!-- Header Placeholder (To be statically included) -->
+  <div class="navbar-div container-fluid header-container">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <div class="container container-small">
+      <div class="row w-100">
+        <div class="col w-100">
+          <div class="my-3 d-flex flex-row align-items-center">
+            <a href="index.html" class="d-inline-block text-decoration-none mr-4">
+              <img src="logo/Etonnet-Log.png" id="logo" alt="Etonnet Logo" />
+            </a>
+            <div class="d-none d-md-block header-title m-0">Etonnet Technologies</div>
+          </div>
+          <nav class="navbar p-0 navbar-expand-lg">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container container-small flex-grow-1">
+    <div class="row">
+      <div class="col mt-4 content-subheader c-blue">Contact Us</div>
+    </div>
+    <hr />
+
+    <div class="row py-5 justify-content-center">
+      <div class="col-lg-10 col-md-12">
+        <div class="card-modern p-5 text-center" style="background-color: #e2e8f0; border: 1px solid #cbd5e1;">
+
+          <h2 class="font-weight-bold mb-4" style="color: var(--primary-color);">Get In Touch</h2>
+
+          <div class="mb-5 text-dark" style="font-size: 1.15rem; font-weight: 600; line-height: 1.6;">
+            ETONNET TECH, LLC<br>
+            Post Office Box: 4470 Stateline NV 89449-4470 USA
+          </div>
+
+          <div class="text-left w-100 mx-auto">
+            <form id="contactForm" action="https://formspree.io/f/xkovyooo" method="POST">
+              <div class="form-group mb-4">
+                <label for="email" class="form-label text-dark font-weight-bold" style="font-size: 1.05rem;">Your
+                  Email</label>
+                <input type="email" name="email" class="form-control bg-white text-dark border-secondary p-4 w-100"
+                  id="email" placeholder="name@example.com" required style="border-radius: 8px;">
+              </div>
+              <div class="form-group mb-5">
+                <label for="message" class="form-label text-dark font-weight-bold" style="font-size: 1.05rem;">How can
+                  we help you?</label>
+                <textarea name="message" class="form-control bg-white text-dark border-secondary p-4 w-100" id="message"
+                  rows="6" placeholder="Your message here..." required style="border-radius: 8px;"></textarea>
+              </div>
+
+              <div id="form-status" class="alert d-none text-center" role="alert"></div>
+
+              <div class="text-center mt-2">
+                <button type="submit" id="submit-btn"
+                  class="btn px-5 py-2 font-weight-bold rounded-pill text-white w-50"
+                  style="background-color: var(--primary-color); border: none; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(0, 51, 102, 0.4); min-width: 250px;">Send
+                  Message</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Success Modal -->
+  <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content" style="border-radius: 12px; border: none; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+        <div class="modal-body text-center p-5">
+          <div class="mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#28a745" class="bi bi-check-circle"
+              viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+              <path
+                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+            </svg>
+          </div>
+          <h4 class="font-weight-bold mb-4" style="color: var(--primary-color);">Thanks for your submission!</h4>
+          <button type="button" class="btn px-4 py-2 font-weight-bold rounded-pill text-white" data-dismiss="modal"
+            style="background-color: var(--primary-color); border: none; min-width: 120px;">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var form = document.getElementById("contactForm");
+      var status = document.getElementById("form-status");
+      var btn = document.getElementById("submit-btn");
+
+      form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        var data = new FormData(form);
+        btn.disabled = true;
+        btn.innerText = "Sending...";
+
+        fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: {
+            'Accept': 'application/json'
+          }
+        }).then(response => {
+          if (response.ok) {
+            $('#successModal').modal('show');
+            status.classList.add("d-none");
+          } else {
+            response.json().then(data => {
+              if (Object.hasOwn(data, 'errors')) {
+                status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+              } else {
+                status.innerHTML = "Oops! There was a problem submitting your form";
+              }
+              status.classList.remove("d-none", "alert-success");
+              status.classList.add("alert-danger");
+            })
+          }
+        }).catch(error => {
+          status.innerHTML = "Oops! There was a problem submitting your form";
+          status.classList.remove("d-none", "alert-success");
+          status.classList.add("alert-danger");
+        }).finally(() => {
+          btn.disabled = false;
+          btn.innerText = "Send Message";
+        });
+      });
+
+      // Reset form when modal is closed
+      $('#successModal').on('hidden.bs.modal', function () {
+        form.reset();
+      });
+    });
+  </script>
+
+  <!-- Footer static placeholder -->
+  <div class="container container-small footer-div mt-auto">
+    <div class="row">
+      <div class="col text-center">
+        <p class="mb-0 text-muted">&copy; 2026 Etonnet Technologies, LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,411 @@
+/* Modern Etonnet Theme */
+:root {
+  --primary-color: #0369a1;
+  /* Deep modern blue */
+  --secondary-color: #0f172a;
+  /* Slate dark for texts/headers */
+  --accent-color: #0ea5e9;
+  /* Bright blue for highlights/hover */
+  --bg-light: #f8fafc;
+  /* Very light slate */
+  --bg-white: #ffffff;
+  --text-main: #334155;
+  /* Soft dark gray for reading */
+  --text-light: #94a3b8;
+  --border-color: #e2e8f0;
+
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-light);
+  line-height: 1.6;
+}
+
+/* Typography Upgrades */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.content-header,
+.content-subheader {
+  color: var(--secondary-color);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-main);
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 2rem 0;
+}
+
+/* Layout container overrides */
+@media (min-width: 1200px) {
+  .container-small {
+    max-width: 1024px;
+  }
+}
+
+/* Navbar Upgrades */
+.header-container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
+  z-index: 1030;
+  position: sticky;
+  top: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-link,
+.dropdown-item {
+  color: var(--text-main);
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem !important;
+  margin: 0 0.2rem;
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover,
+.dropdown-item:hover {
+  background-color: var(--bg-light) !important;
+  color: var(--primary-color) !important;
+}
+
+.nav-link.active,
+.dropdown-item.active {
+  color: var(--primary-color);
+  background-color: transparent !important;
+  font-weight: 700;
+}
+
+#logo {
+  max-width: 220px;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+#logo:hover {
+  transform: scale(1.02);
+}
+
+.header-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  letter-spacing: -0.025em;
+}
+
+/* Hero Section (New) */
+.hero-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 8rem 2rem;
+  border-radius: var(--radius-lg);
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(3, 105, 161, 0.6) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.btn-modern {
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary-modern {
+  color: #fff;
+  background-color: var(--primary-color);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary-modern:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-outline-modern {
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+.btn-outline-modern:hover {
+  background-color: white;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* Cards & Containers */
+.card-modern {
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-modern:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.content-header {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.content-subheader {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.content-subheader::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 50%;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.c-red {
+  color: var(--primary-color);
+}
+
+/* Remapping original red to brand primary for consistency */
+.bg-red {
+  background-color: var(--primary-color);
+}
+
+.content-subheader.c-red::after {
+  background-color: var(--primary-color);
+}
+
+.c-blue {
+  color: var(--accent-color);
+}
+
+.bg-blue {
+  background-color: var(--accent-color);
+}
+
+.content-subheader.c-blue::after {
+  background-color: var(--accent-color);
+}
+
+
+/* Legacy "moreInfo" replacement */
+.moreInfo {
+  display: inline-block;
+  margin-top: auto;
+  /* push to bottom in flex container */
+  color: white;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.95rem;
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+a.moreInfo:hover {
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+}
+
+a.moreInfo.bg-red:hover {
+  background-color: var(--accent-color);
+}
+
+a.moreInfo.bg-blue:hover {
+  background-color: var(--primary-color);
+}
+
+/* Custom Carousel styling improvements */
+.carousel {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.carousel-caption {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(4px);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+
+.carousel-caption h5 {
+  color: white;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.carousel-caption p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Production Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  aspect-ratio: 4/3;
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+  box-shadow: var(--shadow-lg);
+  transform: scale(1.02);
+  z-index: 10;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.1);
+}
+
+/* Utilities */
+.my-4 {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+
+.py-5 {
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+
+.px-4 {
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+
+/* Custom lists */
+ul.custom-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.custom-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-main);
+}
+
+ul.custom-list li::before {
+  content: "\2192";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+/* Footer improvements */
+.footer-div {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  padding: 2rem 0;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--bg-white);
+  margin-top: auto;
+}

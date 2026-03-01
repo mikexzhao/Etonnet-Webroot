@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+    <!-- 	<link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="shop.css" />
+    <title>Etonnet LLC</title>
+  </head>
+  <body>
+    <div class="navbar-div container-fluid header-container"></div>
+    <div class="container container-small">
+      <div class="row">
+        <div class="col mt-4 pt-4 d-flex flex-row">
+          <div class="content-subheader c-red">VariPower-USB-700</div>
+          <div class="content-subheader c-green text-right col ml-auto ">US $38.95</div>
+          <a href="https://www.tindie.com/products/etonnet/varipower-usb-700/" class="buy-button text-center d-flex my-auto"> <div class="my-auto mx-auto">Buy Now</div></a>
+        </div>
+      </div>
+      <hr />
+      <div class="row mt-4">
+        <div class="col-5">
+          <img src="img/VariPower-USB-600-Pic.jpg" class="img-fluid" />
+        </div>
+        <div class="col-7">
+          <p><b>VariPower-USB-700</b> is a USB powered variable power supply(Boost). It is portable and ideal for traveling.</p>
+          <p>Occasionally, we need 5V, 7.4, 9 or 12 volts to power a small circuit board while debugging firmware or hardware. Most variable power supplies on the market are large and expensive. They are inconvenient to carry while traveling. So we designed a USB powered variable mini power supply. It can supply several hundred milliamps via a USB cable from your laptop or desktop computer. If the optional USB based AC/DC power adapter is used, the output current can even reach up to 3.0A.</p>
+          <p>In this version, the load current is not monitored. The power supply is continuously adjustable from around 5V to 32 V using a simple potentiometer. The voltage is shown on the 3-digit segment LED display.</p>
+          <p><b>Features: </b></p>
+          <ul>
+            <li>USB powered variable power supply</li>
+            <li>Adjust voltage through Potentiometer</li>
+            <li>A small portable plastic case</li>
+            <li>Input voltage: 5V (Up to 30V if the external USB AC/DC adapter is used.)</li>
+            <li>Output voltage range: 1.2V to 32V</li>
+            <li>Output current is up to 500mA (Up to 3A if the external USB AC/DC adapter is used)</li>
+            <li>Short circuit protection</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container container-small footer-div"></div>
+    <script>
+      $(document).ready(() => {
+        $(".navbar-div").load("./navbar.html", () => {
+          highlightActive("Products");
+          highlightActive("VariPower-USB-700");
+        });
+        $(".footer-div").load("./footer.html");
+      });
+    </script>
+  </body>
+</html>

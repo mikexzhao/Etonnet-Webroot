@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+    <!-- 	<link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="shop.css" />
+    <title>Etonnet LLC</title>
+  </head>
+  <body>
+    <div class="navbar-div container-fluid header-container"></div>
+
+    <div class="container container-small">
+      <div class="row">
+        <div class="col mt-4 pt-4 d-flex flex-row">
+          <div class="content-subheader c-red">VariPower-USB-Light</div>
+          <div class="content-subheader c-green text-right col ml-auto ">US $24.95</div>
+          <a href="https://www.tindie.com/products/etonnet/varipower-usb-light/" class="buy-button text-center d-flex my-auto"> <div class="my-auto mx-auto">Buy Now</div></a>
+        </div>
+      </div>
+      <hr />
+      <div class="row mt-4">
+        <div class="col-5">
+          <img src="img/2019-05-31T23_59_28.357Z-VariPower-USB-Light1.jpg" class="img-fluid w-100" />
+        </div>
+        <div class="col-7">
+          <p><b>VariPower-USB-Light</b> is a USB powered variable power supply(Buck and Boost). It is portable and ideal for traveling.</p>
+          <p>Occasionally, we need 1.8v, 3V, 3.7V, 5V, 7.4, 9, 12 or 18 volts to power a small circuit board while debugging firmware or hardware. Most variable power supplies on the market are large and expensive. They are inconvenient to carry while traveling. It can supply several hundred milliamps via a USB cable from your laptop or desktop computer.</p>
+          <p>In this version, the load current is not monitored. The power supply is continuously adjustable from around 1.2V to 4.8 V using a simple potentiometer. The voltage is shown on the 3-digit segment LED display.</p>
+          <p><b>Features: </b></p>
+          <ul>
+            <li>USB powered variable power supply</li>
+            <li>Adjust voltage through Potentiometer</li>
+            <li>A small portable plastic case</li>
+            <li>Input voltage: USB 5V</li>
+            <li>Output voltage range: 1V to 24V</li>
+            <li>Power: up to 3W</li>
+            <li>Short circuit protection</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container container-small footer-div"></div>
+    <script>
+      $(document).ready(() => {
+        $(".navbar-div").load("./navbar.html", () => {
+          highlightActive("Products");
+          highlightActive("VariPower-USB-Light");
+        });
+        $(".footer-div").load("./footer.html");
+      });
+    </script>
+  </body>
+</html>

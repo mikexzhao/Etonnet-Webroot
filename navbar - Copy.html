@@ -1,0 +1,55 @@
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div class="container container-small">
+  <div class="row">
+    <div class="col">
+      <div class="my-3 d-flex flex-row">
+        <img src="img/Etonnet-Log_Web.png" class="my-auto" id="logo" />
+        <div class="my-auto mx-4 header-title">Etonnet Technologies</div>
+      </div>
+      <nav class="navbar p-0 navbar-expand-lg">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">Services</a>
+              </li>
+			  <!--
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="dropper" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
+                <div class="dropdown-menu" aria-labelledby="dropper">
+                  <a class="dropdown-item" href="varipower-500.html">VariPower-USB-500</a>
+                  <a class="dropdown-item" href="varipower-700.html">VariPower-USB-700</a>
+                  <a class="dropdown-item" href="varipower-light.html">VariPower-USB-Light</a>
+                </div>
+              </li>
+			  -->
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<script>
+  function highlightActive(text) {
+    for (let element of $(".navbar-nav .nav-link, .navbar-nav .dropdown-item")) {
+      let jElement = $(element);
+      if (jElement.text() == text) {
+        jElement.addClass("active");
+      }
+    }
+  }
+</script>

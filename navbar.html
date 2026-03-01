@@ -1,0 +1,47 @@
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div class="container container-small">
+  <div class="row w-100">
+    <div class="col w-100">
+      <div class="my-3 d-flex flex-row align-items-center">
+        <a href="index.html" class="d-inline-block text-decoration-none mr-4">
+          <img src="logo/Etonnet-Log.png" id="logo" alt="Etonnet Logo"/>
+        </a>
+        <div class="d-none d-md-block header-title m-0">Etonnet Technologies</div>
+      </div>
+      <nav class="navbar p-0 navbar-expand-lg">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<script>
+  function highlightActive(text) {
+    for (let element of $(".navbar-nav .nav-link, .navbar-nav .dropdown-item")) {
+      let jElement = $(element);
+      if (jElement.text() == text) {
+        jElement.addClass("active");
+      }
+    }
+  }
+</script>
